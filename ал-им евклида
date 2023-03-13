@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int NOD(int a, int b) {
+	if (a != b) {
+		if (a > b) return NOD(a - b, b);
+		else return NOD(a, b - a);
+	}
+	else return a;
+}
+
+int main() {
+	setlocale(LC_ALL, "ru");
+	int a, b;
+	cout << "Введите два числа:" << endl;
+	cin >> a >> b;
+	cout << "Ответ:" << endl << NOD(a, b);
+}
