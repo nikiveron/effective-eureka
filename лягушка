@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int f(int y,int x) {
+	if (x == y) return 1;
+	if (y > x) return 0;
+	if (y < x) return f(y + 3, x) + f(y + 5, x);
+}
+
+
+int main() {
+	setlocale(LC_ALL, "ru");
+	int x;
+	cout << "Введите координату точки Х:" << endl;
+	cin >> x;
+	cout << "Ответ:" << endl << f(0,x);
+}
